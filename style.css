@@ -1,0 +1,63 @@
+/* Configuración del cuerpo y fondo con degradado */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(248, 177, 71), rgb(141, 118, 82), white); /* Fondo degradado */
+    background-attachment: fixed; /* Fija el fondo */
+}
+
+/* Estilo del formulario */
+.formulario {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.formulario h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"],
+.formulario input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #020202;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.formulario input[type="submit"] {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background: #0a0a0a;
+}
+
+.formulario .volver {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.formulario .volver a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.formulario .volver a:hover {
+    text-decoration: underline;
+}
