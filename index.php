@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['correo'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,13 +180,12 @@
             </div>
             <nav class="menu">
                 <ul class="navegacion">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="reseñas y ubicacion.html">¿Donde estamos?</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="login.html">Iniciar Session</a></li>
-                    <li><a href="registro.html">Registro</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="reseñas.php">¿Donde estamos?</a></li>
+                <li><a href="nosotros.php">Nosotros</a></li>
+                <li><a href="logout.php">Cerrar sesión</a></li>
+
                 </ul>
             </nav>
         </header>

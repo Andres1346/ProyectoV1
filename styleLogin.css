@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, rgb(248, 177, 71), rgb(141, 118, 82), white); /* Fondo degradado */
-    background-attachment: fixed; /* Fija el fondo */
+    background-attachment: fixed;
 }
 
 /* Estilo del formulario */
