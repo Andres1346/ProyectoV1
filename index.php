@@ -85,14 +85,21 @@ if (!isset($_SESSION['correo'])) {
             margin-bottom: 20px;
         }
 
-        .informacion--boton button {
+        .informacion--boton a.btn-explorar {
             background-color: #ffad31;
             color: white;
-            border: none;
             padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
             border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .informacion--boton a.btn-explorar:hover {
+            background-color: #e69e2a;
         }
 
         .presentacion--imagen img {
@@ -180,12 +187,11 @@ if (!isset($_SESSION['correo'])) {
             </div>
             <nav class="menu">
                 <ul class="navegacion">
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="menu.php">Menu</a></li>
-                <li><a href="reseñas.php">¿Donde estamos?</a></li>
-                <li><a href="nosotros.php">Nosotros</a></li>
-                <li><a href="logout.php">Cerrar sesión</a></li>
-
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="menu.php">Menu</a></li>
+                    <li><a href="reseñas.php">¿Donde estamos?</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
+                    <li><a href="logout.php">Cerrar sesión</a></li>
                 </ul>
             </nav>
         </header>
@@ -197,7 +203,7 @@ if (!isset($_SESSION['correo'])) {
                     <p>Somos los numero 1 en toda COLOMBIA con envios RAPIDOS Y EFICIENTES</p>
                 </div>
                 <div class="informacion--boton">
-                    <button type="button">Explorar combos</button>
+                    <a href="menu.php" class="btn-explorar">Explorar menú</a>
                 </div>
             </div>
             <div class="presentacion--imagen">
@@ -240,6 +246,41 @@ if (!isset($_SESSION['correo'])) {
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <div class="plato--info">
                         <p>$10.99</p>
+                        <button type="button">+</button>                
+                </article>
+                <article class="plato">
+                    <img src="Imagenes/hamburguesa.png" alt="Hamburguesa">
+                    <h1>Hamburguesa de Carne</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
+                        <button type="button">+</button>
+                    </div>                    
+                </article>
+                <article class="plato">
+                    <img src="Imagenes/hamburguesa.png" alt="Hamburguesa">
+                    <h1>Hamburguesa de Carne</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
+                        <button type="button">+</button>
+                    </div>                    
+                </article>
+                <article class="plato">
+                    <img src="Imagenes/hamburguesa.png" alt="Hamburguesa">
+                    <h1>Hamburguesa de Carne</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
+                        <button type="button">+</button>
+                    </div>                    
+                </article>
+                <article class="plato">
+                    <img src="Imagenes/hamburguesa.png" alt="Hamburguesa">
+                    <h1>Hamburguesa de Carne</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <div class="plato--info">
+                        <p>$12.99</p>
                         <button type="button">+</button>
                     </div>                    
                 </article>
