@@ -46,6 +46,10 @@ restaurante/
 4. Iniciar Apache y MySQL desde el panel de XAMPP.
 5. Acceder a `http://localhost/restaurante/` en tu navegador.
 
+🌐 Enlace de despliegue
+Puedes acceder al sistema en producción desde:  
+👉 https://quedeli.shop/login.php
+
 📚 **Documentación Extendida**
 
 La documentación completa del proyecto, incluyendo estructura, instalación detallada, guías de desarrollo, diagramas y más, está disponible en la [Wiki del Proyecto](https://github.com/andres-044/ProyectoV1/wiki).
