@@ -17,14 +17,14 @@ if (!isset($_SESSION['correo'])) {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      background: #1a1a1a;
+      color: #ffffff;
       min-height: 100vh;
     }
 
     /* Header */
     .header {
-      background-color: #ffbc2c;
+      background-color: #ff6f00;
       padding: 20px;
       display: flex;
       align-items: center;
@@ -38,11 +38,7 @@ if (!isset($_SESSION['correo'])) {
       margin: 0;
     }
     .logo span {
-      color: #ffad31;
-    }
-    .hamburguesa img {
-      width: 30px;
-      cursor: pointer;
+      color: #ffc107;
     }
     .menu {
       flex-grow: 1;
@@ -61,13 +57,21 @@ if (!isset($_SESSION['correo'])) {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    .menu a:hover {
+      color: #ffc107;
     }
 
     /* Sección de testimonios */
     .testimonials-section {
       padding: 40px 20px;
-      background-color: #fff;
+      background-color: #121212;
       text-align: center;
+    }
+
+    .testimonials-section h2 {
+      color: #ff6f00;
     }
 
     .testimonials {
@@ -82,13 +86,14 @@ if (!isset($_SESSION['correo'])) {
       align-items: center;
       gap: 20px;
       padding: 20px;
-      background-color: #e9ecef;
+      background-color: #2c2c2c;
       border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
       width: 300px;
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      color: #fff;
     }
 
     .testimonial.visible {
@@ -101,10 +106,11 @@ if (!isset($_SESSION['correo'])) {
       height: 70px;
       border-radius: 50%;
       object-fit: cover;
+      border: 2px solid #ff6f00;
     }
 
     .stars {
-      color: #FFD700;
+      color: #ffc107;
       font-size: 1.2em;
     }
 
@@ -112,9 +118,14 @@ if (!isset($_SESSION['correo'])) {
     .map-container {
       width: 100%;
       height: 400px;
-      background-color: #e9ecef;
+      background-color: #1e1e1e;
       margin-top: 30px;
       text-align: center;
+    }
+
+    .map-container h2 {
+      color: #ff6f00;
+      padding-top: 20px;
     }
 
     iframe {
@@ -130,15 +141,13 @@ if (!isset($_SESSION['correo'])) {
   <div class="logo">
     <p>QUE<span>DELI</span></p>
   </div>
-  <div class="hamburguesa">
-    <img src="Imagenes/menu.png" alt="Menu hamburguesa">
-  </div>
   <nav class="menu">
     <ul class="navegacion">
       <li><a href="index.php">Inicio</a></li>
       <li><a href="menu.php">Menu</a></li>
-      <li><a href="reseñas.php">¿Dónde estamos?</a></li>
+      <li><a href="reseñas.php">Reseñas y Ubicación</a></li>
       <li><a href="nosotros.php">Nosotros</a></li>
+      <li><a href="ver_carrito.php">Carrito</a></li>
       <li><a href="logout.php">Cerrar sesión</a></li>
     </ul>
   </nav>
@@ -206,7 +215,6 @@ if (!isset($_SESSION['correo'])) {
     });
   }
 
-  // Ejecutar al cargar y al hacer scroll
   document.addEventListener("DOMContentLoaded", revealOnScroll);
   document.addEventListener("scroll", revealOnScroll);
 </script>

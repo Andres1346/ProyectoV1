@@ -1,12 +1,14 @@
 <?php
 $servidor = "localhost";
-$usuario = "root";       // o el usuario que tengas
-$password = "";          // pon tu contraseña si tiene
-$bd = "sistema_login";
+$usuario = "u342021155_NOMBREBASE2";
+$password = "CamiloA10!"; // tu contraseña real
+$bd = "u342021155_BASE1";
 
-$conexion = mysqli_connect($servidor, $usuario, $password, $bd);
+// Crear conexión con MySQLi
+$conexion = new mysqli($servidor, $usuario, $password, $bd);
 
-if (!$conexion) {
-    die("Error de conexión: " . mysqli_connect_error());
+// Verificar conexión
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
 }
 ?>

@@ -17,11 +17,12 @@ if (!isset($_SESSION['correo'])) {
       font-family: 'Helvetica', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background-color: #1a1a1a;
+      color: white;
     }
 
     header {
-      background-color: #ffbc2c;
+      background-color: #ff6f00;
       color: white;
       padding: 20px;
       display: flex;
@@ -32,6 +33,7 @@ if (!isset($_SESSION['correo'])) {
     header h1 {
       margin: 0;
       font-size: 24px;
+      color: white;
     }
 
     nav a {
@@ -47,11 +49,6 @@ if (!isset($_SESSION['correo'])) {
 
     main {
       padding: 30px;
-    }
-
-    /* Ocultamos el título global */
-    .titulo-principal {
-      display: none;
     }
 
     .contenido {
@@ -110,23 +107,21 @@ if (!isset($_SESSION['correo'])) {
       min-width: 300px;
     }
 
-    /* Título ¿Quiénes Somos? justo arriba del texto y centrado */
     .titulo-texto {
       text-align: center;
       font-size: 32px;
-      color: #333;
+      color: white;
       margin-bottom: 20px;
     }
 
-    /* Nuestra Misión alineado a la izquierda */
     .texto h2 {
-      color: #000;
+      color: #ffbc2c;
       margin-bottom: 15px;
       text-align: left;
     }
 
     .texto p {
-      color: #000;
+      color: #ddd;
       text-align: justify;
       line-height: 1.6;
       margin-bottom: 15px;
@@ -155,12 +150,15 @@ if (!isset($_SESSION['correo'])) {
 
     .team-member h3 {
       margin-top: 10px;
-      color: #535b64;
+      color: white;
     }
 
-    /* Cuadro naranja más pequeño y centrado */
+    .team-member p {
+      color: #ccc;
+    }
+
     .vision {
-      background-color: #ffad31;
+      background-color: #ff6f00;
       padding: 20px 30px;
       margin: 20px auto;
       max-width: 900px;
@@ -169,13 +167,13 @@ if (!isset($_SESSION['correo'])) {
     }
 
     .vision h2 {
-      color: #000;
+      color: white;
       margin-bottom: 20px;
       text-align: center;
     }
 
     .vision p {
-      color: #000;
+      color: white;
       line-height: 1.6;
       margin: auto;
       text-align: justify;
@@ -189,82 +187,97 @@ if (!isset($_SESSION['correo'])) {
         max-width: 100%;
       }
     }
+
+    .animacion-scroll {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animacion-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Mi Restaurante</h1>
+    <h1>QUEDELI</h1>
     <nav>
       <a href="index.php">Inicio</a>
       <a href="menu.php">Menú</a>
-      <a href="contacto.php">Contacto</a>
-      <a href="nosotros.php">¿Quiénes Somos?</a>
+      <a href="reseñas.php">Reseñas y Ubicación</a>
+      <a href="nosotros.php">Nosotros</a>
+      <a href="ver_carrito.php">Carrito</a>
       <a href="logout.php">Cerrar Sesión</a>
     </nav>
   </header>
 
   <main>
-
     <div class="contenido">
       <div class="slider">
         <div class="slides">
           <div class="slide">
-            <img src="Imagenes/a657a3wv.png" alt="Imagen 1">
+            <img src="Imagenes/a657a3wv.png" alt="Interior del restaurante con clientes">
           </div>
           <div class="slide">
-            <img src="https://ristorantepizzeriailbu.it/wp-content/uploads/2020/11/ristorante-pizzeria-gorlago.jpg" alt="Imagen 2">
+            <img src="https://ristorantepizzeriailbu.it/wp-content/uploads/2020/11/ristorante-pizzeria-gorlago.jpg" alt="Vista exterior del restaurante">
           </div>
         </div>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
       </div>
 
-      <div class="texto">
+      <div class="texto animacion-scroll">
         <h1 class="titulo-texto">¿Quiénes Somos?</h1>
         <h2>Nuestra Misión</h2>
         <p>
-          Nos dedicamos a ofrecer una auténtica experiencia gastronómica callejera a través de nuestra propuesta. Nos apasiona brindar a nuestros clientes una variedad de platos tradicionales y representativos de la rica cultura culinaria, adaptados al ritmo y conveniencia de la vida moderna, sin perder la esencia de sus sabores originales.
-        </p>
-        <p>
-          Cada uno de nuestros ingredientes es cuidadosamente seleccionado para garantizar frescura y calidad, con un enfoque en productos locales que apoyen a nuestros agricultores y productores nacionales.
-        </p>
-        <p>
-          Nos esforzamos por crear un ambiente acogedor y cálido donde cada cliente se sienta como en casa. A través de cada bocado, buscamos que nuestros clientes disfruten no solo de la comida, sino también de una pequeña parte de la calidez y alegría que nos caracteriza.
-        </p>
+          Somos más que una empresa de comidas rápidas: somos una experiencia gastronómica creada para aquellos que buscan sabor, calidad y rapidez en cada bocado.
+
+Nuestra historia nace del deseo de ofrecer a nuestros clientes platos deliciosos, preparados con ingredientes frescos y cuidadosamente seleccionados. Combinamos lo mejor de la cocina urbana con un toque casero que nos diferencia, apostando por recetas tradicionales con un enfoque moderno y dinámico.
+
+Creemos que comer rápido no significa comer mal. Por eso, cada uno de nuestros productos es elaborado con pasión y compromiso, garantizando frescura, sabor auténtico y satisfacción en cada visita.
+
+Desde hamburguesas artesanales hasta papas crocantes, pasando por alitas, wraps y bebidas refrescantes, nuestra misión es ofrecer un menú variado que se adapte a todos los gustos y estilos de vida.
+
+Ya sea que vengas por una comida rápida o por un momento especial con amigos y familia, en [Nombre del Restaurante] te esperamos con las puertas abiertas, una sonrisa y un servicio pensado para ti.
       </div>
     </div>
 
-    <h2 style="text-align: center;">Conoce al Equipo</h2>
+    <h2 style="text-align: center; color: white;">Conoce al Equipo</h2>
     <div class="team">
-      <div class="team-member">
+      <div class="team-member animacion-scroll">
         <img src="CEOS/CEO1.jpg" alt="Miembro 1">
         <h3>Juan Pérez</h3>
         <p>CEO y Fundador</p>
       </div>
-      <div class="team-member">
+      <div class="team-member animacion-scroll">
         <img src="CEOS/CEO2.jpg" alt="Miembro 2">
         <h3>Ana Gómez</h3>
         <p>Directora de Marketing</p>
       </div>
-      <div class="team-member">
+      <div class="team-member animacion-scroll">
         <img src="CEOS/CEO3.jpg" alt="Miembro 3">
         <h3>Carlos López</h3>
         <p>Desarrollador Web</p>
       </div>
     </div>
 
-    <div class="vision">
+    <div class="vision animacion-scroll">
       <h2>Nuestra Visión</h2>
       <p>
-        Convertirnos en el restaurante de comida rápida más reconocido y preferido en Colombia, ofreciendo una propuesta gastronómica auténtica, innovadora y accesible para todos. Buscamos ser un referente en la industria, manteniendo la tradición de la comida colombiana, al tiempo que nos adaptamos a las necesidades y expectativas de un público moderno y diverso. Nuestra visión es expandir nuestra presencia, promoviendo el orgullo por la cultura colombiana y brindando a nuestros clientes una experiencia memorable en cada visita.
+        Ser reconocidos como la cadena de comidas rápidas preferida por su sabor auténtico, calidad constante y atención cercana al cliente.
+
+Aspiramos a crecer de forma sostenible, llevando nuestra propuesta gastronómica a cada rincón del país, sin perder la esencia que nos caracteriza: rapidez, sabor, frescura y compromiso con la experiencia del cliente.
+
+Nos proyectamos como una marca innovadora, capaz de adaptarse a las nuevas tendencias del mercado sin sacrificar nuestros valores: pasión por la comida, respeto por el tiempo del cliente y responsabilidad social en cada paso que damos.
       </p>
     </div>
   </main>
 
   <script>
     let slideIndex = 0;
-
     function showSlides() {
       const slides = document.querySelectorAll('.slide');
       if (slideIndex >= slides.length) slideIndex = 0;
@@ -288,6 +301,19 @@ if (!isset($_SESSION['correo'])) {
     }, 4000);
 
     showSlides();
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.animacion-scroll').forEach(element => {
+      observer.observe(element);
+    });
   </script>
 
 </body>
